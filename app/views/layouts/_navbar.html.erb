@@ -1,12 +1,18 @@
-
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Cleaning</a></li>
+  <li><a href="#!">Car Rental</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">General Services</a></li>
+</ul>
 <nav>
   <div class="nav-wrapper black">
     <a href="#" class="brand-logo right"><%= image_tag "IMG_4650.jpg", size: "95x62"%></a>
     <ul id="nav-mobile" class="left hide-on-med-and-down ">
-      <li><a href="">Services</a></li>
+      <li><a class="dropdown-button" href="#!" id="dropdowner" data-target="dropdown1" >  Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
       <li><a href="">Qoutes</a></li>
       <li><a href="">Contact Us</a></li>
       <li><a href="">About</a></li>
+      <li><a href="">Join us</a></li>
     </ul>
   </div>
 </nav>
