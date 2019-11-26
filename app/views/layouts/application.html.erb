@@ -6,12 +6,43 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
+
+    <style>
+      .services {
+        position: relative;
+      }
+
+      .text-block {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      #navbar {
+        background-color:#990000;
+        position:fixed;  
+        z-index:1; /*Add this*/
+        /*width:100%;
+        height:50px;
+        text-align:center;
+        vertical-align:middle;
+        line-height:50px;
+        top:0px;*/
+      }
+    </style>
   </head>
 
   <body>
-  	<%= render(partial: 'layouts/navbar') %>
-    <%= yield %>
-    <%= render(partial: 'layouts/footer') %>
+    <div>
+      <div id="navbar">
+        <%= render(partial: 'layouts/navbar') %>
+      </div> 
+      <%= yield %>           
+      <%= render(partial: 'layouts/footer') %>
+    </div>  	
   </body>
 </html>

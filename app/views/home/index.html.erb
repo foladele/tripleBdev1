@@ -1,9 +1,38 @@
-<div class='center'>
+<div class="container">
+	<div class='center' style="padding-top: 50px">
+	  <%= image_tag "TB_logo.png", size: "400x250"%>
+	</div> 
 
-	<div style="background-color:black">
-	  <%= image_tag "IMG_4650.jpg", size: "400x250"%>
-	</div>
-
-	<h1 class=''>WELCOME TO TRIPLE B!</h1>
-
+  <div class="col s12 m7">
+    <h2 class="header">Cleaning Services</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <%= image_tag "cleaning_image.jpg", class: "activator"%>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>Services we offer:</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="col s12 m7">
+    <h2 class="header">Rental Services</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <%= image_tag "car_rental.png", class: "activator"%>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>Services we offer:</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>             	
 </div>
