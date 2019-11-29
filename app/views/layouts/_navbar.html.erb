@@ -4,17 +4,27 @@
   <li class="divider"></li>
   <li><a href="#!">General Services</a></li>
 </ul>
-<nav class=".pushpin-demo-nav pinned" data-target="header">
-  <div class="nav-wrapper lime lighten-2">
+
+<nav class="white" role="navigation" data-target="header">
+  <div class="nav-wrapper container">
     <%= link_to root_path do %>
-      <%= image_tag "TB_logo.png", size: "95x62", class: "brand-logo right"%>
+      <%= image_tag "TB_logo.png", size: "95x62", class: "brand-logo", id: "logo-container"%>
     <% end %>
-    <ul id="nav-mobile" class="left hide-on-med-and-down ">
+    <ul class="right hide-on-med-and-down">
       <li><a class="dropdown-button" href="#!" id="dropdowner" data-target="dropdown1" >  Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
       <li><a href="">Qoutes</a></li>
       <li><a href="">Contact Us</a></li>
       <li><a href=""><%= link_to 'Join Us', edit_user_registration_path %></a></li>
-      <li><a href="">About</a></li>      
+      <li><a href="">About</a></li> 
     </ul>
+
+    <ul id="nav-mobile" class="sidenav">
+      <li><a class="dropdown-button" href="#!" id="dropdowner" data-target="dropdown1" >  Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a href="">Qoutes</a></li>
+      <li><a href="">Contact Us</a></li>
+      <li><a href=""><%= link_to 'Join Us', edit_user_registration_path %></a></li>
+      <li><a href="">About</a></li> 
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
   </div>
 </nav>

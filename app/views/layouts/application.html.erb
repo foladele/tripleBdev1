@@ -1,37 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>TribleBDev</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Triple B Enterprises</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
 
     <style>
-      .services {
-        position: relative;
+      nav ul a,
+      nav .brand-logo {
+        color: #444;
       }
 
-      .text-block {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        background-color: black;
-        color: white;
-        padding-left: 20px;
-        padding-right: 20px;
+      p {
+        line-height: 2rem;
       }
-      #navbar {
-        background-color:#990000;
-        position:fixed;  
-        z-index:1; /*Add this*/
-        /*width:100%;
-        height:50px;
-        text-align:center;
-        vertical-align:middle;
-        line-height:50px;
-        top:0px;*/
+
+      .sidenav-trigger {
+        color: #26a69a;
+      }
+
+      .parallax-container {
+        min-height: 380px;
+        line-height: 0;
+        height: auto;
+        color: rgba(255,255,255,.9);
+      }
+        .parallax-container .section {
+          width: 100%;
+        }
+
+      @media only screen and (max-width : 992px) {
+        .parallax-container .section {
+          position: absolute;
+          top: 40%;
+        }
+        #index-banner .section {
+          top: 10%;
+        }
+      }
+
+      @media only screen and (max-width : 600px) {
+        #index-banner .section {
+          top: 0;
+        }
+      }
+
+      .icon-block {
+        padding: 0 15px;
+      }
+      .icon-block .material-icons {
+        font-size: inherit;
+      }
+
+      footer.page-footer {
+        margin: 0;
       }
     </style>
   </head>
@@ -43,6 +71,10 @@
       </div> 
       <%= yield %>           
       <%= render(partial: 'layouts/footer') %>
+      <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <%= javascript_include_tag 'materialize', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'init', 'data-turbolinks-track': 'reload' %>
     </div>  	
   </body>
 </html>
