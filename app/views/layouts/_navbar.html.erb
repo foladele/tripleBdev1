@@ -11,19 +11,19 @@
       <%= image_tag "TB_logo.png", size: "95x62", class: "brand-logo", id: "logo-container"%>
     <% end %>
     <ul class="right hide-on-med-and-down">
-      <li><a class="dropdown-button" href="#!" id="dropdowner" data-target="dropdown1" >  Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><%= link_to "Services", root_path + "#Services" %></li>
       <li><a href="">Qoutes</a></li>
-      <li><a href="">Contact Us</a></li>
+      <li><%= link_to "Contact Us", root_path + "#Contact" %></li>
       <li><a href=""><%= link_to 'Join Us', edit_user_registration_path %></a></li>
-      <li><a href="">About</a></li> 
+      <li><a href="">About Us</a></li> 
     </ul>
 
     <ul id="nav-mobile" class="sidenav">
-      <li><a class="dropdown-button" href="#!" id="dropdowner" data-target="dropdown1" >  Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><%= link_to "Services", root_path + "#Contact" %></li>
       <li><a href="">Qoutes</a></li>
-      <li><a href="">Contact Us</a></li>
+      <li><%= link_to "Contact Us", root_path + "#Contact" %></li>
       <li><a href=""><%= link_to 'Join Us', edit_user_registration_path %></a></li>
-      <li><a href="">About</a></li> 
+      <li><a href="">About Us</a></li> 
     </ul>
     <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
   </div>
