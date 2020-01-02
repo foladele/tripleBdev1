@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
  
   root 'home#index'
-  get 'quotes/index'
-
+  # get 'quotes/index'
+  resources :quotes
   devise_for :users , controllers: {
         registrations: 'users/registrations',
         sessions: 'users/sessions'

@@ -5,10 +5,10 @@
         <br><br>
         <h1 class="header center teal-text text-lighten-2">Triple B Enterprises</h1>
         <div class="row center">
-          <h5 class="header col s12 dark black-text"><b>Your Neigbouring Cleaning, Car Rental and General Services Crew!</b></h5>
+          <h5 class="header col s12 dark black-text teal lighten-5"><b>Your Neigbouring Cleaning, Car Rental and General Services Crew!</b></h5>
         </div>
         <div class="row center">
-          <%= link_to quotes_index_path do %>
+          <%= link_to quotes_path do %>
             <button id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Quote</button>
           <% end %>
         </div>
@@ -16,7 +16,7 @@
 
       </div>
     </div>
-    <div class="parallax"><%= image_tag "house.png" %></div>
+    <div class="parallax"><%= image_tag "house.png", size: "600x600" %></div>
   </div>
 
  <div class="container">
@@ -73,7 +73,7 @@
                 <h2 class="center brown-text"><i class="material-icons">attach_money</i></h2>
                 <h5 class="center">Our Prices</h5>
 
-                <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque </p>
+                <p class="light">We are very affordable and reasonably priced. </p>
               </div>
             </div>
 
@@ -82,7 +82,7 @@
                 <h2 class="center brown-text"><i class="material-icons">map</i></h2>
                 <h5 class="center">Location</h5>
 
-                <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <p class="light">We are located close to you and would provide our services in a timely manner. </p>
               </div>
             </div>
 
@@ -91,7 +91,7 @@
                 <h2 class="center brown-text"><i class="material-icons">shopping_cart</i></h2>
                 <h5 class="center">Our Services</h5>
 
-                <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit eque</p>
+                <p class="light">We provide premium services to every customer that patronizes us.</p>
               </div>
             </div>
           </div>
@@ -104,36 +104,34 @@
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
-      <div class="container">
+      <div class="container" id="Contact">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Where We are Located</h1>
+        <h1 class="header center teal-text text-lighten-2">Location</h1>
         <div class="row center">
-          <h5 class="header col s12 dark black-text"><b>ADDRESS????</b></h5>
+          <h5 class="header col s12 dark black-text">
+            <b>T: 1-800-XXX-XXXX</b>
+          </h5>
+          <h5 class="header col s12 dark black-text">
+            <b>E: admin@admin.mail.com</b>
+          </h5>
+          <h5 class="header col s12 dark black-text">
+            <b>XXX Howard St. #5600</b>
+          </h5>
+          <h5 class="header col s12 dark black-text">
+            <b>Rossue, Dominica</b>
+          </h5>
+        </div>
+        <div class="row center">
+          <%= link_to quotes_path do %>
+            <button id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Quote</button>
+          <% end %>
         </div>
         <br><br>
-
       </div>
     </div>
     <div class="parallax"><%= image_tag "m4.png" %></div>
   </div>
 
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4 id="Contact">Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>        
-      </div>
-      <br>
-      <div class="row center">
-        <%= link_to quotes_index_path do %>
-          <button id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Quote</button>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
+  
+  
 

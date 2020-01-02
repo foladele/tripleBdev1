@@ -22,7 +22,7 @@
                 <h2 class="center brown-text"><i class="material-icons">attach_money</i></h2>
                 <h5 class="center">Estimates</h5>
 
-                <p class="light">An estimate would be sent to you via email. For more questions contact us.</p>
+                <p class="light">An estimate would be sent to you via email. For more information contact us.</p>
               </div>
             </div>
           </div>
@@ -31,14 +31,25 @@
       </div>
 
     </div>
-	<form >
-	  First name: <input type="text" name="fname"><br>
-	  Last name: <input type="text" name="lname"><br>
-	  Address: <input type="text" name="address"><br>
-	  City: <input type="text" name="city"><br>
-	  Description: <input type="text" name="description"><br>
-	  <input class="center" type="submit" value="Submit">
-	</form>
+    <div class="card teal lighten-5">
+			<%= form_for Quote.new, html: { class: "container"} do |f| %>
+				<h5 class="center">Please fill...</h5><br/>
+				First name: <%=f.text_field :fname, placeholder: "Jane", :required => 'required'%>
+				Last name: <%=f.text_field :lname, placeholder: "Doe", :required => 'required'%>
+				Email Address: <%=f.text_field :email, placeholder: "JaneDoe@email.com", :required => 'required'%>
+				Address: <%=f.text_field :address, placeholder: "543 North West", :required => 'required'%>
+				City: <%=f.text_field :city, placeholder: "Roseu"%>
+				State: <%=f.text_field :state, placeholder: "Roseu"%>
+				Zip Code: <%=f.text_field :zip, placeholder: "54387"%>
+				Phone Number: <%=f.text_field :phone_num, placeholder: "543-454-4545"%>
+				Service?  Rental/Cleaning/Gen. Service  : <%= f.text_field :service, placeholder: "cleaning" %>
+				Description: <%=f.text_field :description, placeholder: "House cleaning, 4 bed, 2 baths and laundry"%>
+				
+				<%= f.hidden_field :complete, :value => false %>
+				<p class="center waves-effect waves-light btn"><%= f.submit %><br/></p>
+			<%end%>
+    </div>
+	
 	<br><br>
 
 </div>
