@@ -31,6 +31,7 @@
       </div>
 
     </div>
+    
     <div class="card teal lighten-5">
 			<%= form_for Quote.new, html: { class: "container"} do |f| %>
 				<h5 class="center">Please fill...</h5><br/>
@@ -44,7 +45,7 @@
 				Phone Number: <%=f.text_field :phone_num, placeholder: "543-454-4545"%>
 				Service?  Rental/Cleaning/Gen. Service  : <%= f.text_field :service, placeholder: "cleaning" %>
 				Description: <%=f.text_field :description, placeholder: "House cleaning, 4 bed, 2 baths and laundry"%>
-				
+
 				<%= f.hidden_field :complete, :value => false %>
 				<p class="center waves-effect waves-light btn"><%= f.submit %><br/></p>
 			<%end%>
