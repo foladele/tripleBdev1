@@ -10,26 +10,28 @@
       <div class="col l3 s12">
         <h5 class="white-text">Settings</h5>
         <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
+          <li><%= link_to "Home", root_path, class: "white-text" %></li>
+          <li><%= link_to "Services", root_path + "#Services", class: "white-text" %></li>
+          <li><%= link_to "Qoutes", quotes_index_path, class: "white-text" %></li>
+          <li><%= link_to "Contact Us", root_path + "#Contact", class: "white-text" %></li>
+          <li><a href=""><%= link_to 'Join Us', edit_user_registration_path, class: "white-text" %></a></li>
+          <li><a href="" class="white-text">About Us</a></li> 
+          <li><a class="white-text"><b>Call Us: 1-800-XXX-XXXX</b></a></li>
         </ul>
       </div>
       <div class="col l3 s12">
         <h5 class="white-text">Connect</h5>
         <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
+          <li><a class="white-text" href="">Facebook</a></li>
+          <li><a class="white-text" href="">Twitter</a></li>
+          <li><a class="white-text" href="">Instagram</a></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
-    Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+    
     </div>
   </div>
 </footer>
