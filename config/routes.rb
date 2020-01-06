@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  get 'about_us/index'
+
   root 'home#index'
   # get 'quotes/index'
   resources :quotes
