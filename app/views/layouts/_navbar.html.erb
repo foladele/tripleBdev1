@@ -14,18 +14,31 @@
       <li><%= link_to "Services", root_path + "#Services" %></li>
       <li><%= link_to "Qoutes", quotes_path %></li>
       <li><%= link_to "Contact Us", root_path + "#Contact" %></li>
-      <li><a href=""><%= link_to 'Join Us', edit_user_registration_path %></a></li>
       <li><%= link_to "About Us", about_us_index_path %></li> 
-      <li><a class="teal-text"><b>Call Us: 1-800-XXX-XXXX</b></a></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Requests", about_us_index_path %></li> 
+        <li><%= link_to "Account", edit_user_registration_path %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><a href=""><%= link_to 'Join Us', edit_user_registration_path %></a></li>
+      <% end %>
+      <li><a class="teal-text"><b>Call Us: +1672450981</b></a></li>
+      
     </ul>
 
     <ul id="nav-mobile" class="sidenav">
       <li><%= link_to "Services", root_path + "#Services" %></li>
       <li><%= link_to "Qoutes", quotes_path %></li>
       <li><%= link_to "Contact Us", root_path + "#Contact" %></li>
-      <li><a href=""><%= link_to 'Join Us', edit_user_registration_path %></a></li>
       <li><%= link_to "About Us", about_us_index_path %></li> 
-      <li><a class="teal-text"><b>Call Us: 1-800-XXX-XXXX</b></a></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Requests", about_us_index_path %></li> 
+        <li><%= link_to "Account", edit_user_registration_path %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><a href=""><%= link_to 'Join Us', edit_user_registration_path %></a></li>
+      <% end %>
+      <li><a class="teal-text"><b>Call Us: +1672450981</b></a></li>
     </ul>
     <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
   </div>
